@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read</title>
+</head>
+<body>
+    <div class="container">
+        <h2  class="text-center mt-5 borfer-b py-2 " >List of Volunteers</h2>
+        <table border="1" width="1000"  align="center">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>email</th>
+                    <th>phone</th>
+                    <th>skill</th>
+                    <th>action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% todos.forEach((t)=>{ %>
+                <tr>
+                    <td><%= t.id %></td>
+                    <td><%= t.fname %></td>
+                    <td><%= t.email %></td>
+                    <td><%= t.number %></td>
+                    <td><%= t.skill %></td>
+                    <td>
+                        <a href="/edit/<%= t.id %>" class="btn text-success">edit</a> ||
+                        <a href="/delet/<%= t.id %>" class="btn text-danger">delete</a>
+                    </td>
+                </tr>
+            <% }) %>
+            </tbody>
+        </table>
+
+        <a href="/index">back to home</a>
+    </div>
+</body>
+</html>
