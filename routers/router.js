@@ -3,7 +3,6 @@ const router = express.Router();
 const controller = require('../controllers/controller')
 
 router.get('/' , controller.defaultController);
-router.get('/index' , controller.defaultController)
 router.get('/read' , controller.readTodoController);
 router.post('/todo' , controller.addTodoController);
 router.get('/edit/:id' , controller.editTodoController);

@@ -51,6 +51,6 @@ const deleteTodoController = (req , res) => {
     console.log("delete controller");
     const id = req.params.id;
     todoStorage = todoStorage.filter((todo)=> todo.id != id);
-    res.redirect('/');
+    res.redirect('/read');
 }
 module.exports = {defaultController, addTodoController,editTodoController,updateTodoController,deleteTodoController,readTodoController};
